@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Self study</title>
+</head>
+<body>
+    <script>
+        //         Задание 1
+        // Написать функцию, которая принимает массив строк и возвращает новую строку, в которой все строки объединены через тире -.
+
+        // Пример:
+
+        // Вход: ['яблоко', 'банан', 'киви']
+        // Выход: 'яблоко-банан-киви'
+   
+
+    const array1 = ['яблоко', 'банан', 'киви'];
+
+    function arryToStr(arr) {
+        return arr.join('-');
+        }
+    
+    console.log(arryToStr(array1))
+
+     //         Задание 2
+    // Создать функцию, которая принимает число и возвращает строку: "Число: <число>".
+    // Пример:
+
+    // Вход: 42
+    // Выход: 'Число: 42'
+
+        const number = 42;
+        function getStr (number) {
+            return 'Число: ' + ' ' + number
+        }
+        console.log(getStr(number))
+
+        // function getStr(number) {
+        //     return `Число: ${number}`;
+        // }
+
+
+
+    // Задание 3
+    // Напишите функцию, которая принимает массив чисел и возвращает сумму всех элементов.
+
+    // Пример:
+
+    // Вход: [1, 2, 3, 4]
+    // Выход: 10
+
+    let array3 = [1, 2, 3, 4]
+
+    function getSum (arr) {
+        return arr.reduce(function(sum, current){
+            return sum + current
+        }, 0)
+    }
+
+    console.log(getSum(array3))
+    // Задание 4
+    // Реализовать функцию, которая принимает строку, состоящую из слов, разделённых пробелами, и возвращает количество слов.
+
+    // Пример:
+
+    // Вход: 'привет как дела'
+    // Выход: 3
+
+    const someStr = "привет как дела"
+
+    function countWords (str) {
+        const words = str.trim().split(/\s+/);
+        return words.length
+    }
+
+    console.log('Количество слов: ', countWords(someStr))
+    // Задание 5
+    // Создать функцию, которая принимает объект с полями name и age, и возвращает строку 'Имя: <name>, возраст: <age>'.
+
+    // Пример:
+
+    // Вход: { name: 'Анна', age: 30 }
+    // Выход: 'Имя: Анна, возраст: 30'
+
+
+    const array5 = { name: 'Анна', age: 30 };
+
+    function getInformation (arr) {
+        return `Имя: ${arr.name}, возраст: ${arr.age}`
+    }
+
+    console.log(getInformation(array5))
+
+    // Задание 6
+    // Написать функцию, которая принимает массив чисел и возвращает новый массив, в котором все числа увеличены на 1.
+
+    // Пример:
+
+    // Вход: [0, -1, 5]
+    // Выход: [1, 0, 6]
+
+
+    </script>
+</body>
+</html>
