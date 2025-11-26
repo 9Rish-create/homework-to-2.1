@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Домашнее Задание 2.1</title>
+</head>
+<body>
+    <script>
+
+        // Задание 6
+
+        // Реализовать функцию, которая принимает на вход 2 аргумента: массив и франшизу, а возвращает строку с именами героев разделенных запятой.
+
+        // На входе:
+
+        // [
+        //     { name: "Batman", franchise: "DC" },
+        //     { name: "Ironman", franchise: "Marvel" },
+        //     { name: "Thor", franchise: "Marvel" },
+        //     { name: "Superman", franchise: "DC" }
+        // ], Marvel
+
+        // На выходе: Ironman, Thor
+
+        const heroes = [
+            { name: "Batman", franchise: "DC" },
+            { name: "Ironman", franchise: "Marvel" },
+            { name: "Thor", franchise: "Marvel" },
+            { name: "Superman", franchise: "DC" }
+        ];
+
+        const franchise = "Marvel";
+
+        function getHeroes(arr, franchise) {
+            const filteredHeroes = arr.filter(function(hero){
+                return hero.franchise === franchise;
+            });
+
+            const heroNames = filteredHeroes.map(function(hero){
+                return hero.name;
+            });
+            return heroNames.join(', ')
+
+            // Тут, кстати, тоже можно через стрелочную, получается?
+            
+            // const filteredHeroes = arr.filter(hero => hero.franchise === franchise);
+
+            // const heroNames = filteredHeroes.map(hero => hero.name);
+        
+            // return heroNames.join(', ');
+
+        }
+
+        console.log(getHeroes(heroes, franchise))
+
+    </script>
+</body>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Домашнее Задание 2.1</title>
+</head>
+<body>
+    <script>
+
+            // Задание 1
+
+            // Реализовать функцию, на входе которой массив чисел, на выходе массив уникальных значений:
+
+            // function getUniqVal(arr) {
+            //     ...
+            // }
+
+            // let arr = [1, 2, 2, 4, 5, 5];
+
+            // document.write(getUniqVal(arr)); // [1, 2, 4, 5]
+
+
+
+        function getUniqVal(arr) {
+            const result = [];
+            for (let i = 0; i < arr.length; i++ ) {
+                if (!result.includes(arr[i])) {
+                    result.push(arr[i])
+                }
+            }
+            return result;
+        }
+
+        let arr = [1, 2, 2, 4, 5, 5];
+
+        console.log(getUniqVal(arr)); // [1, 2, 4, 5]
+
+ 
+
+
+    </script>
+</body>
+</html>

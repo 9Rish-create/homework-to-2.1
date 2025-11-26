@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Домашнее Задание 2.1</title>
+</head>
+<body>
+    <script>
+
+        // Задание 4
+
+        // Реализовать функцию, на входе которой объект следующего вида:
+
+        // {
+        //     firstName: 'Петр',
+        //     secondName: 'Васильев',
+        //     patronymic: 'Иванович'
+        // }
+
+        // на выходе строка с сообщением:
+
+        // 'ФИО: Петр Иванович Васильев' 
+
+        const person = {
+            firstName: 'Петр',
+            secondName: 'Васильев',
+            patronymic: 'Иванович'
+        }
+
+        function getStr(person) {
+            return 'ФИО: ' + person.firstName  + ' ' + person.patronymic + ' ' + person.secondName;
+
+            // Еще увидела в интернете такой способ с обратными кавычками и долларами
+            // return `ФИО: ${person.firstName} ${person.patronymic} ${person.secondName}`
+        }
+
+        console.log(getStr(person))
+    </script>
+</body>

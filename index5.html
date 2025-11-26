@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Домашнее Задание 2.1
+    </title>
+</head>
+<body>
+    <script>
+        //         Задание 5
+
+        // Реализовать функцию, которая принимает на вход 2 аргумента: массив чисел и множитель, а возвращает исходный массив, каждый элемент которого был умножен на множитель:
+
+        // На входе: [1, 2, 3, 4], 5
+
+        // На выходе: [5,10,15, 20]
+
+        const arr = [1, 2, 3, 4];
+        const multiplier = 5;
+        
+        function getMultiply(arr, multiplier) {
+            return arr.map(function(element){
+                return element * multiplier
+            }) 
+        }
+        // Еще стрелочную функцию нашла в справочнике по js 
+
+        // Вот такую:
+        // function multiplyArray(arr, multiplier) {
+        //      return arr.map(element => element * multiplier);
+        // }
+
+
+            console.log(getMultiply(arr, multiplier))
+    </script>
+</body>

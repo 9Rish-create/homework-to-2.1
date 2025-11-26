@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Домашнее Задание 2.1
+    </title>
+</head>
+<body>
+    <script>
+
+        // Задание 2
+
+        // Реализовать функцию, на входе которой число с ошибкой, на выходе строка с сообщением:
+
+        // 500 => Ошибка сервера
+        // 401 => Ошибка авторизации
+        // 402 => Ошибка сервера
+        // 403 => Доступ запрещен
+        // 404 => Не найдено
+
+        function getErrorMessage(code) {
+            switch(code) {
+                case 500:
+                    return "Ошибка сервера";
+                case 401:
+                    return "Ошибка авторизации";
+                case 402:
+                    return "Ошибка сервера";
+                case 403:
+                    return "Доступ запрещен";
+                case 404:
+                    return "Не найдено";
+                default:
+                    return "Ошибка по непонятным причинам"
+            }
+        }
+
+        console.log(getErrorMessage(500))
+        console.log(getErrorMessage(401))
+        console.log(getErrorMessage(402))
+        console.log(getErrorMessage(403))
+        console.log(getErrorMessage(404))
+        console.log(getErrorMessage(111))
+
+    </script>
+</body>
+</html>
